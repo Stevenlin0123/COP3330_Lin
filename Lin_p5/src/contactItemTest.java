@@ -81,5 +81,12 @@ class contactItemTest {
 		assertEquals("coding101@gmail.com", a.getEmail());
 	}
 	
+	@Test
+	public void testToString() {
+		contactItem a = new contactItem("contact", "Item", "444-444-4444", "hi@hotmail.com");
+		String result = a.getContactFirst() + " " + a.getContactLast()+ " " + a.getNumber() + " " + a.getEmail();
+		assertEquals("contact Item 444-444-4444 hi@hotmail.com", result);
+	}
+	
 	
 }
